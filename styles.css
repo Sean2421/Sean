@@ -1,0 +1,160 @@
+/* ===== RESET / BASICS =====
+   Removes default browser spacing so everything is predictable. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.6;
+  color: #1a1a1a;
+  background-color: #fafafa;
+}
+
+/* ===== HEADER / NAV =====
+   Flexbox lines the logo and nav links up horizontally,
+   with space-between pushing them to opposite ends. */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background-color: #0f047a; /* swap for your own brand color */
+  color: #ffffff;
+}
+
+.site-header .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.site-header nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.site-header nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== HERO ===== */
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+  background-color: #eef1fb;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero .highlight {
+  color: #0f047a;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #2f9a10; /* swap for your own accent color */
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* ===== GENERAL SECTIONS ===== */
+.section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #2f9a10;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+/* ===== PROJECTS =====
+   Flexbox with wrap lets the cards flow onto new rows
+   automatically as the screen gets narrower. */
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.project-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  flex: 1 1 220px; /* grow, shrink, minimum width before wrapping */
+}
+
+.project-card h3 {
+  margin-bottom: 0.5rem;
+  color: #0f047a;
+}
+
+/* ===== SKILLS ===== */
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.skills-list li {
+  background-color: #0f047a;
+  color: #ffffff;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* ===== CONTACT ===== */
+#contact a {
+  color: #0f047a;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE =====
+   Below 600px width, stack the header vertically
+   and shrink the hero text a bit. */
+@media (max-width: 600px) {
+  .site-header {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+}
